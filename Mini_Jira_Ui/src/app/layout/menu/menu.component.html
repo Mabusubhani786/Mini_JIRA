@@ -1,0 +1,23 @@
+<aside
+  class="w-64 h-screen fixed top-0 left-0 z-10 shadow-md border-l-4"
+  style="background-color: #000000; color: #ffffff; border-color: #001a1a"
+>
+  <div class="p-4 text-2xl font-bold border-b border-gray-700">Mini JIRA</div>
+
+  <nav class="mt-6 flex flex-col space-y-1 px-4 text-sm">
+    <a
+      *ngFor="let item of menuItems"
+      [routerLink]="item.route"
+      routerLinkActive="active-menu"
+      [routerLinkActiveOptions]="{ exact: true }"
+      class="group flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-150 hover:bg-[#e6ffff] hover:text-black"
+      [ngClass]="{
+        'hover:border-l-4': item.label !== 'Logout',
+        'text-red-500 hover:text-red-700': item.label === 'Logout'
+      }"
+    >
+      <ng-icon [name]="item.icon" class="w-5 h-5"></ng-icon>
+      <span class="truncate">{{ item.label }}</span>
+    </a>
+  </nav>
+</aside>

@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+.active-menu {
+  background-color: #e6ffff !important;
+  color: #000000 !important;
+  font-weight: 600;
+  border-left: 4px solid #006600;
+}

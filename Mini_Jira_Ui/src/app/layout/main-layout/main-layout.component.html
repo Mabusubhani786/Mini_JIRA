@@ -1,0 +1,19 @@
+<div class="h-screen flex">
+  <!-- Sidebar Menu -->
+  <div class="w-64 h-full fixed top-0 left-0 z-10">
+    <app-menu></app-menu>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="flex-1 ml-64 flex flex-col min-h-screen">
+    <!-- Fixed Header -->
+    <div class="fixed top-0 left-64 right-0 h-16 z-20">
+      <app-header></app-header>
+    </div>
+
+    <!-- Page Content with padding to avoid header overlap -->
+    <main class="flex-1 pt-[5rem] p-[1rem] overflow-y-auto">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
